@@ -40,15 +40,21 @@ int main()
 
 void makeTurtle() {
     //Color Palette
-    ALLEGRO_COLOR light_green = al_map_rgb(0, 100, 0);
-    ALLEGRO_COLOR dark_green = al_map_rgb(0, 50, 0);
-    ALLEGRO_COLOR white = al_map_rgb(255, 255, 255);
-    ALLEGRO_COLOR black = al_map_rgb(0, 0, 0);
+    ALLEGRO_COLOR light_green = al_map_rgb(90, 145, 59);
+    ALLEGRO_COLOR green = al_map_rgb(43, 70, 28);
+    ALLEGRO_COLOR dark_green = al_map_rgb(25, 41, 16);
+    ALLEGRO_COLOR white = al_map_rgb(245, 245, 245);
+    ALLEGRO_COLOR black = al_map_rgb(10, 10, 10);
 
     //Make Head
     al_draw_filled_circle(580, 300, 75, light_green);
+   
+    //Make Eyes
     al_draw_filled_ellipse(590, 350, 20, 15, white);
     al_draw_filled_ellipse(590, 250, 20, 15, white);
+
+    al_draw_filled_ellipse(590, 250, 16, 12, black);
+    al_draw_filled_ellipse(590, 350, 16, 12, black);
 
     //Make Tail
     al_draw_filled_triangle(175, 320, 175, 280, 115, 300, light_green);
@@ -60,7 +66,7 @@ void makeTurtle() {
     al_draw_filled_circle(500, 400, 50, light_green);
 
     //Make Shell
-    al_draw_filled_ellipse(350, 300, 200, 150, light_green);
+    al_draw_filled_ellipse(350, 300, 200, 150, green);
 
     //Make Shell Lines
     al_draw_ellipse(350, 300, 200, 150, dark_green, 8);
@@ -71,7 +77,7 @@ void makeTurtle() {
     al_draw_line(150, 300, 550, 300, dark_green, 8);
     al_draw_line(350, 150, 350, 450, dark_green, 8);
 
-    al_draw_filled_ellipse(350, 300, 80, 60, light_green);
+    al_draw_filled_ellipse(350, 300, 80, 60, green);
     al_draw_ellipse(350, 300, 80, 60, dark_green, 8);
 }
 
